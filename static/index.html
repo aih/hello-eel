@@ -6,27 +6,7 @@
     <title>Hello Eel</title>
     <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
     <script type="text/javascript" src="/eel.js"></script>
-    <script type="text/javascript">
-        eel.expose(say_hello_js); // Expose this function to Python
-        function say_hello_js(x) {
-          console.log("Hello from " + x);
-        }
-  
-        say_hello_js("Javascript World!");
-        eel.say_hello_py("Javascript World!"); // Call a Python function
-      </script>
-      <script type='text/javascript'>
-        
-        async function pick_file() {
-            let folder = document.getElementById('input-box').value;
-            let file_div = document.getElementById('file-name');
-            
-            // Call into Python so we can access the file system
-            let random_filename = await eel.pick_file(folder)();
-            file_div.innerHTML = random_filename;
-        }
-        
-        </script>
+    <script type="text/javascript" src="/js/index.js"></script>
 </head>
 <body>
    Hello, Eel! 
